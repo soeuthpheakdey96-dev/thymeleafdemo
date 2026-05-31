@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Customer-form</title>
+   <style>
+   .error {
+   color:red;
+   }
+   
+body {
+  
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #43a047;
+}
+   </style>
+</head>
+
+<body>
+    
+   <header class="container">
+    <form th:action="@{/ProcessFormCustomer}" th:object="${Customer}" method="POST">
+    
+    the FirstName:<input type="text" th:field="*{fullname}"/>
+     <span th:if="${#fields.hasErrors('fullname')}"
+    	  th:errors="*{fullname}" class="error"></span>
+    <br></br>
+    the password:<input type="password" th:field="*{password}"/>
+      <span th:if="${#fields.hasErrors('password')}"
+    	  th:errors="*{password}" class="error"></span>
+    <br></br>
+    the email:<input type="text" th:field="*{email}"/>
+    <span th:if="${#fields.hasErrors('email')}"
+    	  th:errors="*{email}" class="error"></span>
+    <br></br>
+    the PhnoneNumber:<input type="text" th:field="*{phonenumber}"/>
+    <span th:if="${#fields.hasErrors('phonenumber')}"
+    	  th:errors="*{phonenumber}" class="error"></span>
+    <br></br>
+    
+    the freepasses:<input type="text" th:field="*{freepass}"/>
+    <span th:if="${#fields.hasErrors('freepass')}"
+    	  th:errors="*{freepass}" class="error"></span>
+    <br><br>
+    Postacode:<input type="text" th:field="*{PostaCode}"/>
+    <span th:if="${#fields.hasErrors('PostaCode')}"
+    	  th:errors="*{PostaCode}" class="error"></span>
+    <br><br>
+    Course Code:<input type="text" th:field="*{courseCode}"/>
+    <span th:if="${#fields.hasErrors('courseCode')}"
+    	  th:errors="*{courseCode}" class="error"></span>
+    <input class="btn" type="submit" name="submit">
+    </form>
+    </header>
+</body> 

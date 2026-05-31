@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>student-form</title>
+    
+</head>
+
+<body>
+    
+   
+    <form th:action="@{/ProcessFormStudent}" th:object="${student}" method="POST">
+    
+    the FirstName:<input type="text" th:field="*{firstname}"/>
+    <br></br>
+    
+    the LastName:<input type="text" th:field="*{lastname}"/>
+    <br></br>
+    <label>Country:</label>
+    	<select th:field="*{Country}">
+  			<option value="Cambodia">Cambodia</option>
+  			<option value="England">England</option>
+  			<option value="Spain">Spain</option>
+  			<option value="Brazil">Brazil</option>
+  			<option value="France">France</option>
+		</select>
+    	<br></br>
+    	
+    <label>Country (properties setting):</label>
+    	<select th:field="*{countries}">
+    		<option th:each="tempCountry : ${countries}"
+    				th:value="${tempCountry}"
+    				th:text="${tempCountry}"/>
+    	</select>
+    	<br><br>
+    	
+    	Favorite Program Language :
+    	<input type="radio" th:field="*{favoritelangue}" th:value="Go"/>Go Programing
+    	<input type="radio" th:field="*{favoritelangue}" th:value="Java"/>Java Programing
+    	<input type="radio" th:field="*{favoritelangue}" th:value="Python"/>Python Programing
+    	<br><br>
+    	
+    <label th:each="langue : ${langues}">
+        <input type="radio" th:field="*{language}" th:value="${langue}" />
+        <span th:text="${langue}"></span>
+    </label>
+	<br><br>
+	<label>favorite oparating System:</label>
+	<input type="checkbox" th:field="*{favoriteSystem}" th:value="Linux"/>Linux
+	<input type="checkbox" th:field="*{favoriteSystem}" th:value="LG"/>LG
+	<input type="checkbox" th:field="*{favoriteSystem}" th:value="Window"/>Window
+	
+	<br><br>
+	
+	 favorite oparating System:
+       
+        <input type="checkbox" th:field="*{system}"
+        		th:each="Systemp : ${sys}"
+         		th:value="${Systemp}" 
+        		th:text="${Systemp}"/>
+    </label>
+    <br><br>
+    <input type="submit" name="submit">
+    
+    </form>
+  
+</body>
+</html>

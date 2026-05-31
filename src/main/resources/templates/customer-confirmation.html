@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+ </head>
+ <body>
+ 
+ <h3>Customer contirmation</h3>
+ <br>   
+	The Customer is firstname: <span th:text="${Customer.fullname}"/>
+	<br></br>
+	
+	The Customer is password: <span th:text="${Customer.password}"/>
+	<br></br>
+	
+	The Customer is email: <span th:text="${Customer.email}"/>
+	<br></br>
+	
+	The Phone Number is: <span th:text="${Customer.phonenumber}"/>
+	<br></br>
+	
+	free passes: <span th:text="${Customer.freepass}"/>
+	<br></br>
+	
+	Postacode: <span th:text="${Customer.PostaCode}"/>
+	<br></br>
+	
+	Course code: <span th:text="${Customer.courseCode}"/>
+ </body>
+ </html>

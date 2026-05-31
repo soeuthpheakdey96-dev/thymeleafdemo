@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>hiWorld-form</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    
+</head>
+
+<body>
+	 <div class="container">
+  
+  <div class="form">
+  <h2>User Registration</h2><br><br>
+  </div>
+  <form th:action="@{/ProcessFormVersionTwo}" method="GET">
+  
+    <div class="input-group">
+  <label>FirstName</label>
+    <input type="text" Name="FirstName"
+    placeholder="What's your FirstName?"/>
+    <div/>
+     <br>
+    <div class="input-group">
+  <label>LastName</label>
+    <input type="text" Name="LastName"
+    placeholder="Enter your LastName?"/>
+    <div/>
+     <br>
+    <div class="input-group">
+  <label>Email</label>  
+    <input type="text" Name="Email"
+    placeholder="Enter your Email?"/>
+    <div/>
+     <br>
+    <div class="input-group">
+  <label>Phonenumber</label>  
+    <input type="text" Name="Phonenumber"
+    placeholder="Enter your Phonenumber?"/>
+    <div/>
+     <br>
+    <div class="input-group">
+  <label>Age</label> 
+    <input type="text" Name="Age"
+    placeholder="Enter your Age"?/>
+    <div/>
+     <br>
+    <div class="input-group">
+  <label>Address</label>  
+    <input type="text" Name="Address"
+    placeholder="Enter your Address"?/>
+    <div/>
+     <br>
+    
+  <div class="input-group">
+  <label>Skill</label>
+    <select class="input-box" name="Skill">
+        <option value="Skill">Select your Skill</option>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+    </select>
+    <div/>
+    <br>
+    <div class="input-group">
+  <label>Education</label>  
+    <select class="input-box" name="Education">
+        <option value="Education">Select your Education</option>
+        <option>RUPP</option>
+        <option>ITC</option>
+        <option>NORTON</option>
+    </select>
+    <div/>
+    <div class="head">
+	<button type="submit">Submit</button>
+	</div>
+  </div>
+  </form>
+    
+
+</body>
+
+</html>

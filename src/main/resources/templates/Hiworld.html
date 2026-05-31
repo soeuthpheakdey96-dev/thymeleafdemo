@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Thymeleaf Demo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    
+</head>
+
+<body>
+   <div class="succes-container">
+   <h3>Registration Successful!</h3>
+   
+   <p>Thank you for registering.Here are the details you submitted:</p>
+   
+    <div class="constain">
+    The FirstName:<span th:text="${FirstName}"/>
+    <br></br>
+    
+    The LastName:<span th:text="${LastName}"/>
+    <br></br>
+    
+    The Email:<span th:text="${Email}"/>
+    <br></br>
+    
+    The Phonenumber:<span th:text="${Phonenumber}"/>
+    <br></br>
+    
+    The Age:<span th:text="${Age}"/>
+    <br></br>
+    
+    The Address:<span th:text="${Address}"/>
+    <br></br>
+    
+    The Skill:<span th:text="${Skill}"/>
+    <br></br>
+    
+    The Education:<span th:text="${Education}"/>
+    <br></br>
+	</div>
+	</div>
+
+</body>
+
+</html>
